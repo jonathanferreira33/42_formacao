@@ -114,4 +114,42 @@ Na segunda semana, os problemas ficam mais complexos. Você terá que gerenciar 
         
     - _Opcional, mas recomendado:_ Usar testes comunitários criados por outros alunos (ex: _Francinette_, _libft-war-machine_) para checar os casos que você esqueceu de testar.
         
-    - Escrever seu `README.md`.
+   
+    CHECK LIST:
+    |LIB|VALIDACAO|Norminette|TESTS|
+    |isalnum|-|-|-|
+    |isascii|-|-|-|
+    |isalpha|-|-|-|
+    |isprint|-|-|-|
+    |isdigit|-|-|-|
+    |strcat|-|-|-|
+    |strchr|-|-|-|
+    |strlcat|-|-|-|
+    |strlen|-|-|-|
+    |strncmp|-|-|-|
+    |strnstr|-|-|-|
+    |strrchr|-|-|-|
+    |tolower|-|-|-|
+    |toupper|-|-|-|
+    |-|-|-|-|
+    |-|-|-|-|
+
+    PENDENTES:
+    |ft_striteri|-|-|-|
+    |ft_strmapi|-|-|-|
+    |ft_split|-|-|-|
+    |ft_itoa|-|-|-|
+    |ft_substr|-|-|-|
+    |ft_strjoin|-|-|-|
+    |ft_strtrim|-|-|-|
+    |calloc|-|-|-|
+    |strdup|-|-|-|
+    |strlcpy|-|-|-|
+    |memset|-|-|-|
+    |bzero|-|-|-|
+    |memcpy|-|-|-|
+    |memmove|-|-|-|
+    |memchr|-|-|-|
+    |memcmp|-|-|-|
+    |atoi|-|-|-|
+    |Makefile|-|-|-|
