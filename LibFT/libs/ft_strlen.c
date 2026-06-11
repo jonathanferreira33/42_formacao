@@ -1,4 +1,4 @@
-int	strlen(char arg[])
+int	ft_strlen(char arg[])
 {
 	int	count;
 	count = 0;

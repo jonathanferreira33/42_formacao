@@ -1,4 +1,4 @@
-int isdigit(char arg)
+int ft_isdigit(char arg)
 {
     if((arg >= '0' && arg <= '9'))
         return (1);

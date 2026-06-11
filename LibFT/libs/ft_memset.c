@@ -13,7 +13,7 @@
 // n = numero de "bytes" que serão preenchidos. Não é necessariamente o tamanho do array
 #include "libft.h"
 
-void	*memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 	unsigned char	value;

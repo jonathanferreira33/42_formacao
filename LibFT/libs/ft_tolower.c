@@ -1,4 +1,4 @@
-int tolower(int arg)
+int ft_tolower(int arg)
 {
     if(arg >= 'a' && arg <= 'z')
         arg = arg + '32';

@@ -7,7 +7,7 @@
 //para o valor numérico dos bytes na memória.
 #include "libft.h"
 
-int		memcmp(const void *s1, const void *s2, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char *p_s1;
 	unsigned char *p_s2;

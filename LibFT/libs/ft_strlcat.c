@@ -1,10 +1,10 @@
 #include "libft.h"
 
-unsigned int	strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	count_dest;
-	unsigned int	count_src;
-	unsigned int	count;
+	size_t	count_dest;
+	size_t	count_src;
+	size_t	count;
 
 	count_dest = 0;
 	count_src = 0;
