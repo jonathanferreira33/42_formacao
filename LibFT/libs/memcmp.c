@@ -1,3 +1,0 @@
-O que faz: Compara byte a byte (tratados como unsigned char) os primeiros n bytes das áreas de memória s1 e s2. Retorna 0 se forem idênticas, um valor menor que zero se o primeiro byte diferente em s1 for menor que o de s2, ou maior que zero se for maior.
-
-O que resolve: É a versão de memória do strncmp. Permite comparar blocos de dados não-textuais (como duas structs para ver se seus conteúdos são exatos) de forma rápida e segura, olhando para o valor numérico dos bytes na memória.

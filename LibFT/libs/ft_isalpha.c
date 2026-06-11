@@ -1,4 +1,4 @@
-int isalpha(char arg)
+int ft_isalpha(char arg)
 {
     if((arg >= 'a' && arg <= 'z') || (arg >= 'A' && arg <= 'Z'))
         return (1);

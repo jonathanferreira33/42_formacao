@@ -133,6 +133,9 @@ Na segunda semana, os problemas ficam mais complexos. Você terá que gerenciar 
     |toupper|-|-|-|
     |atoi|-|-|-|
     |strlcpy|-|-|-|
+    |strdup|-|-|-|
+    |memset|-|-|-|
+    |memcpy|-|-|-|
     |-|-|-|-|
     |-|-|-|-|
 
@@ -143,16 +146,13 @@ Na segunda semana, os problemas ficam mais complexos. Você terá que gerenciar 
     |ft_putnbr_fd|-|-|-|
     |ft_striteri|-|-|-|
     |ft_strmapi|-|-|-|
+    |calloc|-|-|-|
     |ft_split|-|-|-|
     |ft_itoa|-|-|-|
     |ft_substr|-|-|-|
     |ft_strjoin|-|-|-|
     |ft_strtrim|-|-|-|
-    |calloc|-|-|-|
-    |strdup|-|-|-|
-    |memset|-|-|-|
     |bzero|-|-|-|
-    |memcpy|-|-|-|
     |memmove|-|-|-|
     |memchr|-|-|-|
     |memcmp|-|-|-|

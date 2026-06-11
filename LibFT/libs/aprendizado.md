@@ -42,3 +42,14 @@ printf("%c\n", letra);
 printf("%d\n", letra);
 
 ```
+
+
+O Truque do -1 ou Inversão de Bits
+Como o tipo que estamos usando (size_t ou unsigned int / unsigned long) é sem sinal (unsigned), ele não entende números negativos. Se você tentar atribuir -1 a ele, ocorre um underflow: ele dá a volta e vai direto para o maior número possível que aquela variável consegue guardar.
+
+Você tem duas formas nativas e absolutas de obter o equivalente exato do SIZE_MAX em C:
+
+1. Fazendo um cast de -1:
+
+C
+(unsigned int)-1

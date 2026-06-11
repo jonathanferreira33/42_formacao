@@ -1,4 +1,4 @@
-char	*strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int		count_dest;
 	int		count;

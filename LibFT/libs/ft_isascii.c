@@ -1,4 +1,4 @@
-int isascii(char arg)
+int ft_isascii(char arg)
 {
     if(arg >= 0 && arg <= 127)
         return (1);

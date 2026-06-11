@@ -11,9 +11,9 @@
 // s = ponteiro para a regiao de memoria que sera preenchida
 // c = valor usado para prencher a memoria, que será convertido para unsigned char
 // n = numero de "bytes" que serão preenchidos. Não é necessariamente o tamanho do array
+#include "libft.h"
 
-
-void	*memset(void *s, int c, unsigned int n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 	unsigned char	value;

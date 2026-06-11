@@ -9,7 +9,9 @@
 // O que resolve: Resolve a repetição de código. Sem ela, você sempre teria que fazer um strlen
 // para descobrir o tamanho, um malloc(tamanho + 1) para alocar espaço, e um strcpy para copiar.
 // A strdup faz tudo isso em uma única chamada.
-char	*strdup(const char *s)
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
 {
 	int		i;
 	int		len;
