@@ -7,8 +7,9 @@
 // arrays de inteiros, blocos de structs ou qualquer outro 
 // tipo de dado. Regra de ouro: as áreas de memória de src e 
 // dest não podem se sobrepor.
+#include "libft.h"
 
-void	*memcpy(void *dest, const void *src, unsigned int n)
+void	*memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*ptr_dest;
 	unsigned char	*ptr_src;

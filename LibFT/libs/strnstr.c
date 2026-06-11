@@ -1,4 +1,6 @@
-char	*strnstr(const char *str, const char *to_find, unsigned int len)
+#include "libft.h"
+
+char	*strnstr(const char *str, const char *to_find, size_t len)
 {
 	unsigned int	i;
 	unsigned int	j;
