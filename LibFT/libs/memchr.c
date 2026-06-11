@@ -1,0 +1,3 @@
+O que faz: Vasculha os primeiros n bytes do bloco de memória s procurando pela primeira ocorrência do caractere c (tratado como unsigned char). Retorna um ponteiro para o byte encontrado ou um ponteiro nulo (0/NULL) se não achar nada.
+
+O que resolve: Assim como o memcpy é a versão "bruta" do strcpy, o memchr é a versão "bruta" do strchr. Ele resolve a necessidade de procurar um byte específico em dados binários ou blocos de memória que contenham zeros no meio, ignorando as regras convencionais de strings.
