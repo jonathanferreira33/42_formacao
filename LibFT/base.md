@@ -131,10 +131,16 @@ Na segunda semana, os problemas ficam mais complexos. Você terá que gerenciar 
     |strrchr|-|-|-|
     |tolower|-|-|-|
     |toupper|-|-|-|
+    |atoi|-|-|-|
+    |strlcpy|-|-|-|
     |-|-|-|-|
     |-|-|-|-|
 
     PENDENTES:
+    |ft_putchar_fd|-|-|-|
+    |ft_putstr_fd|-|-|-|
+    |ft_putendl_fd|-|-|-|
+    |ft_putnbr_fd|-|-|-|
     |ft_striteri|-|-|-|
     |ft_strmapi|-|-|-|
     |ft_split|-|-|-|
@@ -144,12 +150,10 @@ Na segunda semana, os problemas ficam mais complexos. Você terá que gerenciar 
     |ft_strtrim|-|-|-|
     |calloc|-|-|-|
     |strdup|-|-|-|
-    |strlcpy|-|-|-|
     |memset|-|-|-|
     |bzero|-|-|-|
     |memcpy|-|-|-|
     |memmove|-|-|-|
     |memchr|-|-|-|
     |memcmp|-|-|-|
-    |atoi|-|-|-|
     |Makefile|-|-|-|
