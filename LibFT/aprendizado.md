@@ -151,3 +151,79 @@ Traduzindo para o português, a seta diz ao computador:
 "Pegue o endereço guardado em new_node, vá até a memória apontada por ele, destranque a estrutura que está lá e acesse a gaveta chamada content."
 
 ___
+
+O que você precisa entender aqui:
+1. Por que t_list lst e não t_list *lst?
+Imagine que na sua função main, você tem um ponteiro chamado head (cabeça) que aponta para o início da sua lista:
+t_list *head = NULL;
+
+Se a função recebesse apenas um ponteiro simples (t_list *lst), você passaria uma cópia de head para a função. A função mudaria a cópia para apontar para o novo nó, mas o seu head lá na main continuaria valendo NULL.
+
+Para que a função consiga alterar a variável head original lá na main, nós precisamos passar o endereço de memória de onde a variável head está guardada.
+Por isso passamos &head na hora de chamar a função, e a função recebe um ponteiro que aponta para outro ponteiro (lst).
+
+Quando fazemos *lst = new; na linha 19, estamos dizendo: "Vá até onde lst aponta (lá na variável head da main) e mude o valor dela para new".
+
+2. A Ordem das Operações é VITAL!
+Olhe para as linhas 15 e 19. A ordem delas não pode ser invertida.
+
+Se você fizesse isso primeiro:
+*lst = new; (Atualiza a cabeça da lista para ser o novo nó)
+Você perderia o endereço do resto da lista! O antigo elemento nº 1 sumiria no limbo da memória (causando um memory leak), porque ninguém mais sabe o endereço dele.
+
+Por isso, fazemos como o Indiana Jones trocando o ídolo de ouro pelo saco de areia:
+
+Primeiro garantimos a segurança: new->next = *lst; (O novo nó segura a mão do antigo primeiro nó).
+
+Depois soltamos a base: *lst = new; (A placa de "INÍCIO DA LISTA" agora aponta para o novo nó).
+
+Ficou claro como essa manipulação de ponteiros altera a estrutura da lista? Podemos seguir para o próximo desafio!
+
+___
+
+A principal diferença entre adicionar no início (ft_lstadd_front) e adicionar no final (ft_lstadd_back) é a necessidade de viajar pela lista (iterar).
+
+Na função ft_lstadd_front que você selecionou no Canvas, nós resolvemos o problema imediatamente: pegamos o nó new, dizemos que o next dele é o início atual, e avisamos a cabeça da lista que há um novo "nº 1". É uma operação quase instantânea, independentemente do tamanho da lista.
+
+Já na ft_lstadd_back, temos dois desafios:
+
+Onde é o final? Nós só temos a "cabeça" da lista. Precisamos criar um ponteiro viajante para pular de vagão em vagão (de next em next) até encontrar o último vagão (aquele cujo next aponta para NULL). Só então engatamos o new lá.
+
+E se não houver lista? Se a lista estiver totalmente vazia (a "cabeça" aponta para NULL), não há para onde viajar. O vagão new se torna automaticamente o primeiro (e único) da lista.
+
+___
+
+ft_lstlast
+
+Essa função é bem simples, pois é a base de como iteramos (percorremos) uma lista encadeada. É muito parecida com o laço while que usamos na ft_lstadd_back agora pouco, mas o objetivo aqui é apenas contar os "vagões" do trem.
+
+O que você precisa entender aqui:
+Por que podemos alterar lst diretamente?
+Na função ft_lstadd_front e ft_lstadd_back, nós recebíamos t_list lst (o endereço de onde a cabeça estava guardada) e tínhamos que tomar muito cuidado.
+Aqui, recebemos apenas t_list *lst (uma cópia do endereço do primeiro nó). Nós podemos fazer lst = lst->next quantas vezes quisermos! Isso vai fazer a nossa cópia "andar" pela lista para que possamos contar os elementos, enquanto o ponteiro original (lá na sua main) continua intacto, apontando para o primeiro nó.
+
+___
+
+Vamos agora para a função que começa a lidar com a destruição e liberação de memória: a ft_lstdelone.
+
+Nesta função, você recebe um único nó da lista e uma função chamada del (que é um ponteiro de função, assim como vimos na ft_strmapi e ft_striteri). A missão aqui é "destruir" esse nó de forma segura, garantindo que não haja vazamento de memória (memory leak).
+
+Vou gerar o código no Canvas para você:
+
+O que você precisa entender aqui:
+Por que precisamos da função del?
+Como o nosso t_list guarda um void *content (um conteúdo genérico), nós não sabemos se esse conteúdo é uma string simples (que precisaria de um único free), se é um array bidimensional (que precisaria de um laço while para dar free em cada linha), ou se é apenas um ponteiro para uma variável estática que nem de free precisa.
+É por isso que quem chama a ft_lstdelone deve fornecer uma função (del) que saiba exatamente como destruir aquele conteúdo específico. Nós apenas confiamos nela e a executamos: del(lst->content).
+
+A Ordem das Operações é VITAL!
+Você nunca pode fazer free(lst) antes de del(lst->content). Se você destruir o nó primeiro, você perderá a "chave" para acessar o lst->content. Isso resultaria em um memory leak, porque o conteúdo ficaria flutuando na memória Heap sem que você pudesse acessá-lo para dar o free.
+
+Regra de Ouro: Primeiro esvazie a caixa, depois jogue a caixa fora.
+
+Por que não mexemos no next?
+O enunciado diz claramente: "does NOT free the next node". Essa função serve para isolar e destruir cirurgicamente apenas um elemento (por exemplo, se você quisesse remover um vagão que quebrou no meio do trem, sem destruir o trem inteiro). A destruição em cadeia será trabalho da próxima função da lista, a ft_lstclear.
+
+Fez sentido o papel do ponteiro de função del aqui? Se sim, me avise quando quiser ir para a próxima!
+
+___
+
