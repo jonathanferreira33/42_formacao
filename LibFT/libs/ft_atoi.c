@@ -8,9 +8,7 @@ int		ft_atoi(const char *str)
 	sign = 1;
 	result = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-	{
 		i++;
-	}
 	if (str[i] == '-' || str[i] == '+') {
 		if (str[i] == '-')
 			sign *= -1;
@@ -23,3 +21,13 @@ int		ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(void)
+// {
+//     printf("Atoi: %d", ft_atoi("-a"));
+// 	   printf("\nOriginal Atoi: %d", atoi("-a"));
+//     return (0);
+// }
