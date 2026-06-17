@@ -1,8 +1,12 @@
-# ifndef LIBFT_H
-
+#ifndef LIBFT_H
 #define LIBFT_H
-
 #include <stddef.h>
+
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+}   t_list;
 
 int		ft_isascii(char arg);
 int		ft_isalnum(char arg);
@@ -28,3 +32,5 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+#endif
