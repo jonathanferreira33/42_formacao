@@ -62,10 +62,10 @@ static void	free_split(char **str_splitted, size_t i)
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	char	**str_splitted;
+	char	**split;
 
-	str_splitted = malloc(sizeof(char *) * (count_strings(s, c) + 1));
-	if (!str_splitted)
+	split = malloc(sizeof(char *) * (count_strings(s, c) + 1));
+	if (!split)
 		return (NULL);
 	i = 0;
 	while (*s)
@@ -74,15 +74,15 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (!*s)
 			break ;
-		str_splitted[i] = get_word(s, c);
-		if (!str_splitted[i])
+		split[i] = get_word(s, c);
+		if (!split[i])
 		{
-			free_split(str_splitted, i);
+			free_split(split, i);
 			return (NULL);
 		}
 		s += word_len(s, c);
 		i++;
 	}
-	str_splitted[i] = NULL;
-	return (str_splitted);
+	split[i] = NULL;
+	return (split);
 }
