@@ -14,46 +14,46 @@ O primeiro projeto do currículo principal da 42 é a **Libft**. A finalidade é
 ## 🛠️ Funções Implementadas
 
 ### Parte 1 - Funções da Libc
-| Função | Descrição |
-| :--- | :--- |
+| Função       | Descrição |
+| ---          | ---                                               |
 | `ft_isalpha` | Verifica se o caractere é alfabético. |
 | `ft_isdigit` | Verifica se o caractere é um dígito (0-9). |
 | `ft_isalnum` | Verifica se o caractere é alfanumérico. |
 | `ft_isascii` | Verifica se o caractere pertence à tabela ASCII. |
 | `ft_isprint` | Verifica se o caractere é imprimível. |
-| `ft_strlen` | Calcula o comprimento de uma string. |
-| `ft_memset` | Preenche a memória com um byte constante. |
-| `ft_bzero` | Zera uma estrutura de dados de tamanho n. |
-| `ft_memcpy` | Copia uma área de memória. |
+| `ft_strlen`  | Calcula o comprimento de uma string. |
+| `ft_memset`  | Preenche a memória com um byte constante. |
+| `ft_bzero`   | Zera uma estrutura de dados de tamanho n. |
+| `ft_memcpy`  | Copia uma área de memória. |
 | `ft_memmove` | Copia uma área de memória (seguro para sobreposições). |
 | `ft_strlcpy` | Copia uma string limitando o tamanho do buffer. |
 | `ft_strlcat` | Concatena uma string limitando o tamanho do buffer. |
 | `ft_toupper` | Converte um caractere para maiúsculo. |
 | `ft_tolower` | Converte um caractere para minúsculo. |
-| `ft_strchr` | Localiza a primeira ocorrência de um caractere na string. |
+| `ft_strchr`  | Localiza a primeira ocorrência de um caractere na string. |
 | `ft_strrchr` | Localiza a última ocorrência de um caractere na string. |
 | `ft_strncmp` | Compara duas strings até `n` caracteres. |
-| `ft_memchr` | Localiza um caractere em um bloco de memória. |
-| `ft_memcmp` | Compara dois blocos de memória. |
+| `ft_memchr`  | Localiza um caractere em um bloco de memória. |
+| `ft_memcmp`  | Compara dois blocos de memória. |
 | `ft_strnstr` | Localiza uma sub-string dentro de uma string limitando a busca. |
-| `ft_atoi` | Converte uma string em um inteiro. |
-| `ft_calloc` | Aloca memória dinamicamente e a preenche com zeros. |
-| `ft_strdup` | Duplica uma string alocando nova memória. |
+| `ft_atoi`    | Converte uma string em um inteiro. |
+| `ft_calloc`  | Aloca memória dinamicamente e a preenche com zeros. |
+| `ft_strdup`  | Duplica uma string alocando nova memória. |
 
 ### Parte 2 - Funções Adicionais
-| Função | Descrição |
-| :--- | :--- |
-| `ft_substr` | Extrai uma sub-string de uma string maior. |
-| `ft_strjoin` | Concatena duas strings em uma nova alocação. |
-| `ft_strtrim` | Remove caracteres específicos do início e fim de uma string. |
-| `ft_split` | Divide uma string em uma matriz de strings usando um caractere delimitador. |
-| `ft_itoa` | Converte um número inteiro em uma string. |
-|`ft_strmapi` | Aplica uma função a cada caractere de uma string, criando uma nova. |
-| `ft_striteri` | Aplica uma função a cada caractere de uma string (modificando a própria string). |
+| Função          | Descrição |
+| ---             | --- |
+| `ft_substr`     | Extrai uma sub-string de uma string maior. |
+| `ft_strjoin`    | Concatena duas strings em uma nova alocação. |
+| `ft_strtrim`    | Remove caracteres específicos do início e fim de uma string. |
+| `ft_split`      | Divide uma string em uma matriz de strings usando um caractere delimitador. |
+| `ft_itoa`       | Converte um número inteiro em uma string. |
+| `ft_strmapi`    | Aplica uma função a cada caractere de uma string, criando uma nova. |
+| `ft_striteri`   | Aplica uma função a cada caractere de uma string (modificando a própria string). |
 | `ft_putchar_fd` | Saída de um caractere para um file descriptor. |
-| `ft_putstr_fd` | Saída de uma string para um file descriptor. |
+| `ft_putstr_fd`  | Saída de uma string para um file descriptor. |
 | `ft_putendl_fd` | Saída de uma string seguida por uma nova linha para um file descriptor. |
-| `ft_putnbr_fd` | Saída de um número inteiro para um file descriptor. |
+| `ft_putnbr_fd`  | Saída de um número inteiro para um file descriptor. |
 
 ### Funções da Parte 3 - Linked List
 | Função | Descrição |
