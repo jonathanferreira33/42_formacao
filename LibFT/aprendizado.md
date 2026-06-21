@@ -227,7 +227,7 @@ Fez sentido o papel do ponteiro de função del aqui? Se sim, me avise quando qu
 
 ___
 
-## strchr 
+## strchr "caractere na string".
 A função strchr em C serve para localizar a primeira ocorrência de um caractere específico dentro de uma string. Ela retorna um ponteiro para a posição onde o caractere foi encontrado ou NULL caso ele não exista na string
 
 ___
@@ -268,4 +268,51 @@ size_t strlcpy(char *dst, const char *src, size_t dstsize);
 - dst: Ponteiro para o buffer de destino onde a string será copiada.
 - src: Ponteiro para a string de origem que será copiada.
 - dstsize: O tamanho total (em bytes) disponível no buffer de destino.
+___
+
+## strcat
+
+A função strcat em C é utilizada para concatenar (unir) duas strings. Ela pega o conteúdo de uma string de origem e o anexa ao final de uma string de destino, substituindo o caractere nulo ('\0') da primeira pelo primeiro caractere da segunda.
+
+___
+
+## strrchr 
+
+strrchr: Procura a última ocorrência do caractere na string, começando do fim para o início. O "r" extra significa reverse (reverso) ou right (direita).
+
+___
+
+## strncmp 
+
+A função strncmp em C é usada para comparar duas strings (sequências de caracteres) até um número máximo especificado de caracteres.O nome strncmp é uma abreviação para String N Compare (ou String Number Compare):
+
+- str: Refere-se a string.
+- n: Refere-se ao limite máximo de caracteres que serão comparados.
+- cmp: Refere-se a compare (comparar).
+
+___
+
+## memchr
+
+A função memchr() na linguagem C é utilizada para buscar a primeira ocorrência de um byte específico dentro de um bloco de memória, útil para manipular dados binários ou strings que não terminam com o caractere nulo.
+
+O nome é a abreviação de "memory character" (caractere de memória). Diferente de funções como strchr, que param obrigatoriamente quando encontram o fim de uma string (o byte \0), o nome memchr indica que ela escaneia o espaço bruto da memória procurando por um caractere/byte
+
+___
+
+## memcmp
+
+A função memcmp() na linguagem C é uma função de manipulação de memória utilizada para comparar dois blocos de memória byte a byte.
+
+Ela é frequentemente usada para verificar se duas estruturas, vetores ou áreas de dados binários/brutos são idênticos, ou para determinar a ordem alfabética/numérica entre eles.
+
+___
+
+## atoi
+A função atoi (abreviação de ASCII to integer) é uma função nativa da linguagem C que converte uma string contendo números (como "123") para o seu valor numérico correspondente (o inteiro 123). Ela está disponível na biblioteca 
+___
+___
+___
+___
+___
 ___
