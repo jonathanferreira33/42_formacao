@@ -227,3 +227,45 @@ Fez sentido o papel do ponteiro de função del aqui? Se sim, me avise quando qu
 
 ___
 
+## strchr 
+A função strchr em C serve para localizar a primeira ocorrência de um caractere específico dentro de uma string. Ela retorna um ponteiro para a posição onde o caractere foi encontrado ou NULL caso ele não exista na string
+
+___
+
+## memmove
+A função memmove() em C copia um bloco de memória de um local para outro, garantindo que a operação seja segura mesmo se os blocos de origem e destino se sobrepuserem.
+
+___
+
+## memset
+
+A função memset() em C é usada para preencher um bloco de memória com um valor de byte específico. Ela é altamente eficiente para inicializar arrays ou limpar estruturas de dados (zerar blocos) e requer a inclusão da biblioteca 
+
+https://www.youtube.com/watch?v=TQYYLTCoOTY
+
+___
+## bzero
+
+A função bzero() em C é usada para preencher uma área de memória com bytes nulos ('\0'). É frequentemente utilizada para inicializar buffers ou estruturas (como as de socket) antes do uso. Embora seja comum, hoje em dia é considerada uma função legada e o uso de memset() é preferido.
+
+https://www.youtube.com/watch?v=jd9PABbIvbA
+___
+
+## memcpy
+
+A função memcpy é usada para copiar um bloco de memória de uma localização para outra de forma extremamente rápida. Ela está definida na biblioteca <string.h> e exige que você informe o destino, a origem e o tamanho exato em bytes a ser copiado
+
+___
+
+## strlcpy
+
+A função strlcpy é uma alternativa segura para a função strcpy. Ela copia uma string de origem (src) para um buffer de destino (dst) garantindo que o buffer nunca sofra estouro de buffer (buffer overflow) e que o destino seja sempre terminado com um caractere nulo (\0)
+
+``` c
+size_t strlcpy(char *dst, const char *src, size_t dstsize);
+```
+
+- dst: Ponteiro para o buffer de destino onde a string será copiada.
+- src: Ponteiro para a string de origem que será copiada.
+- dstsize: O tamanho total (em bytes) disponível no buffer de destino.
+___

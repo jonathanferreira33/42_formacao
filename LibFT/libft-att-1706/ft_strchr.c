@@ -1,25 +1,29 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathfe <jonathfe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 20:35:41 by jonathfe          #+#    #+#             */
-/*   Updated: 2026/06/17 16:07:33 by jonathfe         ###   ########.fr       */
+/*   Updated: 2026/06/21 10:10:36 by marvin           ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-char	*ft_strchr(char *arg, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
-	while (arg[count] != '\0')
+	while (s[count] != '\0')
 	{
-		if (arg[count] == c)
-			return (&arg[count]);
+		if (s[count] == c)
+			return (&s[count]);
 		count++;
 	}
-	return (0);
+	if ((char) c == '\0')
+		return ((char *)&s[count]);
+	return (NULL);
 }
